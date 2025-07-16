@@ -1,1 +1,1 @@
-# CHR2025
+# ColonialTerms
