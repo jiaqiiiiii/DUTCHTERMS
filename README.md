@@ -110,10 +110,10 @@ scripts/data_cleaning.py
 scripts/model_training.py
 
 ### 4. Semantic Change Analysis
-# Analyze Handelsblad
+#### Analyze Handelsblad
 scripts/handelsblad_change.py
 
-# Analyze Telegraaf  
+#### Analyze Telegraaf  
 scripts/telegraaf_change.py
 
 ### 5. Connotation Analysis
