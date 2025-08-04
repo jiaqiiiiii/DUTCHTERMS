@@ -36,9 +36,8 @@ The study spans three time periods: 1860-1899, 1900-1939, and 1940-1960, focusin
 
 ### Data Collection & Preprocessing
 
-- **`multithreaded_delpher.py`**: Scrapes newspaper articles from the Delpher digital archive using their API with multithreading for efficient data collection for the 1880-1960 period.For the 1860-1880 data, you can download from Delpher: [
-](https://www.delpher.nl/over-delpher/delpher-open-krantenarchief/download-teksten-kranten-1618-1879#b1741)
-
+- **`multithreaded_delpher.py`**: Scrapes newspaper articles from the Delpher digital archive using their API with multithreading for efficient data collection for the 1880-1960 period. For the 1860-1880 data, you can download from Delpher: https://www.delpher.nl/over-delpher/delpher-open-krantenarchief/download-teksten-kranten-1618-1879#b1741.
+  
 - **`data_cleaning.py`**: Preprocesses raw text data by:
   - Removing punctuation, symbols, and numerical characters
   - Filtering words shorter than 3 characters
