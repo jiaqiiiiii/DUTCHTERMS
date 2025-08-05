@@ -31,7 +31,7 @@ The study spans three time periods: 1860-1899, 1900-1939, and 1940-1960, focusin
 - **`pos_tagging.py`**:
   - Assigning POS tags to all words using spaCy Dutch model (nl_core_news_sm)
     
-- **`connotation_analysis.py`**:
+- **`connotation_analysis.ipynb`**:
   - Extracting adjective modifiers for keywords nouns 
   - Extracting nouns for keywords adjectives
 
