@@ -15,10 +15,11 @@ The study spans three time periods: 1860-1899, 1900-1939, and 1940-1960, focusin
   - Filtering words shorter than 3 characters
   - Removing function words (articles, prepositions, conjunctions)
   - Standardising text for model training
+  If your data are in English, you can directly use the model training configurations in config.yaml setting the preprocessing skip to False (see model_training).
 
 ### Embeddings Analysis
 
-- **`model_training.py`** to train Word2Vec models for each newspaper and time period.
+- **`model_training`** to train Word2Vec models for each newspaper and time period. The code is adapted from `https://github.com/Living-with-machines/DiachronicEmb-BigHistData/tree/main`.
   
 - **`handelsblad_change.py`** & **`telegraaf_change.py`** to perform embeddings-based analysis:
   - Cosine similarity analysis
