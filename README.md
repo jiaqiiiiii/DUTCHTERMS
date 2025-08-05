@@ -20,6 +20,7 @@ The study spans three time periods: 1860-1899, 1900-1939, and 1940-1960, focusin
 ### Embeddings Analysis
 
 - **`model_training`** to train Word2Vec models for each newspaper and time period. The code is adapted from `https://github.com/Living-with-machines/DiachronicEmb-BigHistData/tree/main`.
+  To train your data, create a folder in tests folder (e.g., test_data) with the raw texts divided per period in a txt format with around 500 characters per line. 
   
 - **`handelsblad_change.py`** & **`telegraaf_change.py`** to perform embeddings-based analysis:
   - Cosine similarity analysis
