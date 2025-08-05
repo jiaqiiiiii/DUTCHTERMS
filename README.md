@@ -10,28 +10,6 @@ We examine semantic change in colonial terminology across two major Dutch newspa
 
 The study spans three time periods: 1860-1899, 1900-1939, and 1940-1960, focusing on how colonial terminology evolved across different ideological contexts and historical events.
 
-## 🗂️ Repository Structure
-
-```
-├── scripts/
-│   ├── multithreaded_delpher.py    # Delpher API scraping script
-│   ├── pos_tagging.py              # POS tagging and keyword analysis
-│   ├── handelsblad_change.py       # Semantic change analysis for Handelsblad
-│   ├── telegraaf_change.py         # Semantic change analysis for Telegraaf
-│   ├── data_cleaning.py            # Text preprocessing for model training
-│   └── model_training.py           # Word2Vec model training script
-├── models/
-│   ├── handelsblad_1860_1899.model # Word2Vec models (6 total)
-│   ├── handelsblad_1900_1939.model
-│   ├── handelsblad_1940_1960.model
-│   ├── telegraaf_1893_1899.model
-│   ├── telegraaf_1900_1939.model
-│   └── telegraaf_1940_1960.model
-├── data/
-│   └── delpher_files_list_1880s_as_example.csv  # Example filenames from Delpher
-└── README.md
-```
-
 ## 🔧 Scripts Description
 
 ### Data Collection & Preprocessing
@@ -57,7 +35,7 @@ The study spans three time periods: 1860-1899, 1900-1939, and 1940-1960, focusin
 - **`pos_tagging.py`**:
   - Adding POS tags to all words using the spaCy Dutch model
   - Highlighting specific colonial keywords when used as nouns
-- **`connotation_analysis.py`**
+- **`connotation_analysis.py`**:
   - Extracting adjective modifiers for connotative analysis
   - Analysing usage patterns over time
 
