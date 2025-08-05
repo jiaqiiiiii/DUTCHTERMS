@@ -13,8 +13,8 @@ The study spans three time periods: 1860-1899, 1900-1939, and 1940-1960, focusin
 - **`data_cleaning.py`** to preprocesses raw text data by:
   - Removing punctuation, symbols, and numerical characters
   - Filtering words shorter than 3 characters
-  - Removing function words (articles, prepositions, conjunctions)
-  - Standardising text for model training
+  - Removing function words (articles, prepositions, conjunctions) and punctuations.
+  
   If your data are in English, you can directly use the model training configurations in config.yaml setting the preprocessing skip to False (see model_training).
 
 ### Embeddings Analysis
