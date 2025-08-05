@@ -44,113 +44,29 @@ The study spans three time periods: 1860-1899, 1900-1939, and 1940-1960, focusin
   - Removing function words (articles, prepositions, conjunctions)
   - Standardising text for model training
 
-### Model Training
+### Embeddings model
 
-- **`model_training.py`**: Trains Word2Vec models for each newspaper and time period using:
+- **`model_training.py`**:
+- Trains Word2Vec models for each newspaper and time period using:
   - Vector size: 300 dimensions
   - Training epochs: 3
   - Separate models for each temporal period
 
 ### Analysis Scripts
 
-- **`pos_tagging.py`**: Conducts connotation analysis by:
+- **`pos_tagging.py`**:
   - Adding POS tags to all words using the spaCy Dutch model
   - Highlighting specific colonial keywords when used as nouns
+- **`connotation_analysis.py`**
   - Extracting adjective modifiers for connotative analysis
   - Analysing usage patterns over time
 
-- **`handelsblad_change.py`** & **`telegraaf_change.py`**: Perform embeddings-based analysis:
+- **`handelsblad_change.py`** & **`telegraaf_change.py`**:
+- Perform embeddings-based analysis:
   - Cosine similarity calculations across time periods
   - Nearest neighbours analysis for semantic change detection
   - Orthogonal Procrustes alignment for cross-temporal comparison
   - Classification of change patterns (divergence, stability, parallel change)
-
-## 📊 Data
-
-### Target Keywords
-We analyse 25 colonial/racial terminology variants, including:
-- `blanke`, `neger`, `creool`, `inlander`, `primitief`, `koeli`
-- And their plural/variant forms (see `pos_tagging.py` for complete list)
-
-### Dataset Statistics
-- **Temporal coverage**: 1860-1960 (100 years)
-- **Newspapers**: Algemeen Handelsblad (full period), De Telegraaf (1893-1960)
-- **Content type**: Articles only (excluding advertisements and announcements)
-- **Time periods**: 1860-1899, 1900-1939, 1940-1960
-
-*Note: Due to copyright restrictions, we cannot publish the full newspaper corpus. The `delpher_files_list_1880s_as_example.csv` file contains example filenames from our 1880s dataset to demonstrate data structure.*
-
-## 🛠️ Requirements
-
-```bash
-# Core dependencies
-pandas
-spacy
-gensim  # for Word2Vec
-scikit-learn  # for Procrustes alignment
-tqdm
-numpy
-matplotlib  # for visualisation
-```
-
-### spaCy Model
-```bash
-python -m spacy download nl_core_news_sm
-```
-
-## 🚀 Usage
-
-### 1. Data Collection
-scripts/multithreaded_delpher.py
-
-### 2. Data Preprocessing
-scripts/data_cleaning.py
-
-### 3. Model Training
-scripts/model_training.py
-
-### 4. Semantic Change Analysis
-#### Analyze Handelsblad
-scripts/handelsblad_change.py
-
-#### Analyze Telegraaf  
-scripts/telegraaf_change.py
-
-### 5. Connotation Analysis
-scripts/pos_tagging.py
-
-## 📈 Methodology
-
-### Embeddings-based Analysis
-1. **Model Training**: Separate Word2Vec models for each newspaper and time period
-2. **Alignment**: Orthogonal Procrustes method to align different vector spaces
-3. **Similarity Measurement**: Cosine similarity across time periods (reference = 1 for first period)
-
-### Connotation Analysis
-1. **POS Tagging**: spaCy Dutch model for grammatical analysis
-2. **Keyword Extraction**: Colonial terms used as nouns
-3. **Modifier Analysis**: Adjectives modifying target keywords
-4. **Temporal Tracking**: Frequency changes of connotative adjectives over time
-
-## 📚 Historical Context
-
-### Time Period Significance
-- **1860-1899**: Commercial exploitation phase of Dutch colonialism
-- **1900-1939**: Implementation of Ethical Policy (1901) marking ideological transition
-- **1940-1960**: Japanese occupation (1942-1945) and decolonisation struggles
-
-## ⚖️ Data Ethics & Limitations
-
-- **Temporal Imbalance**: De Telegraaf missing initial 33 years (1860-1893)
-- **Copyright**: Full newspaper corpus cannot be shared publicly
-- **Historical Context**: Analysis of historical terminology for academic research purposes
-- **Bias Acknowledgment**: Different editorial perspectives may influence language patterns
-
-## 📄 Citation
-
-```bibtex
-[The paper citation will go here]
-```
 
 ## 🤝 Contributing
 
