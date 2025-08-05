@@ -5,7 +5,7 @@ namethetest: 'tere_news_telegraaf'
 # ------------------- General input variables --------------------
 
 inputs:
-  directory: '/data/groups/trifecta/teresa/CHR/Exp_Diac/tests/test_data_2/'
+  directory: '/data/groups/trifecta/teresa/CHR/Exp_Diac/tests/test_data/'
 
 # ------------------- Preprocessing settings --------------------
 
